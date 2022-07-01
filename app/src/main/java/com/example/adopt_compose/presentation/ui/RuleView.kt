@@ -31,7 +31,8 @@ import com.example.adopt_compose.R
 
 @Composable
 fun RuleIcon(
-    @DrawableRes iconId: Int = R.drawable.ic_launcher_foreground
+    @DrawableRes iconId: Int = R.drawable.ic_launcher_foreground,
+    enabled: Boolean = true
 ) {
     var isClick by remember { mutableStateOf(false) }
     val setSize by animateDpAsState(targetValue = if (isClick) 70.dp else 40.dp)
@@ -40,7 +41,7 @@ fun RuleIcon(
             .clip(shape = CircleShape)
             .background(colorResource(id = R.color.hous_gray))
             .size(setSize)
-            .clickable { isClick = !isClick }
+            .clickable(enabled = enabled) { isClick = !isClick }
     ) {
         Image(
             modifier = Modifier
@@ -63,7 +64,7 @@ fun RuleList() {
         horizontalArrangement = Arrangement.spacedBy(12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        item { RuleIcon(R.drawable.ic_person) }
+        item { RuleIcon(R.drawable.ic_person, enabled = false) }
         items(5) { RuleIcon() }
         item { RuleIcon(R.drawable.ic_add) }
     }
