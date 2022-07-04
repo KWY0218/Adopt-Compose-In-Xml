@@ -17,6 +17,13 @@ import com.example.adopt_compose.R
 @Composable
 fun GetPentagon() {
     val color = colorResource(id = R.color.back_gray)
+    val siteList = arrayListOf(
+        arrayOf(Pair(-70, 60), Pair(-70, 70), Pair(-60, 70), Pair(-50, 70)),
+        arrayOf(Pair(50, 70), Pair(60, 70), Pair(70, 70), Pair(70, 60)),
+        arrayOf(Pair(70, -20), Pair(70, -30), Pair(60, -40)),
+        arrayOf(Pair(20, -70), Pair(0, -85), Pair(-20, -70)),
+        arrayOf(Pair(-60, -40), Pair(-70, -30), Pair(-70, -20))
+    )
     Canvas(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -24,78 +31,34 @@ fun GetPentagon() {
         val centerY = this.size.center.y
         val path = Path().apply {
             moveTo(
-                x = centerX - 70.dp.toPx(),
-                y = centerY - 20.dp.toPx()
+                x = centerX + siteList[4][2].first.dp.toPx(),
+                y = centerY + siteList[4][2].second.dp.toPx()
             )
-
-            lineTo(
-                x = centerX - 70.dp.toPx(),
-                y = centerY + 60.dp.toPx(),
-            )
-            cubicTo(
-                centerX - 70.dp.toPx(),
-                centerY + 70.dp.toPx(),
-                centerX - 60.dp.toPx(),
-                centerY + 70.dp.toPx(),
-                centerX - 50.dp.toPx(),
-                centerY + 70.dp.toPx(),
-            )
-
-            lineTo(
-                x = centerX + 50.dp.toPx(),
-                y = centerY + 70.dp.toPx()
-            )
-
-            cubicTo(
-                centerX + 60.dp.toPx(),
-                centerY + 70.dp.toPx(),
-                centerX + 70.dp.toPx(),
-                centerY + 70.dp.toPx(),
-                centerX + 70.dp.toPx(),
-                centerY + 60.dp.toPx(),
-            )
-
-            lineTo(
-                x = centerX + 70.dp.toPx(),
-                y = centerY - 20.dp.toPx()
-            )
-
-            cubicTo(
-                centerX + 70.dp.toPx(),
-                centerY - 30.dp.toPx(),
-                centerX + 70.dp.toPx(),
-                centerY - 30.dp.toPx(),
-                centerX + 50.dp.toPx(),
-                centerY - 40.dp.toPx(),
-            )
-
-            lineTo(
-                x = centerX + 20.dp.toPx(),
-                y = centerY - 70.dp.toPx()
-            )
-
-            cubicTo(
-                x1 = centerX,
-                centerY - 85.dp.toPx(),
-                x2 = centerX,
-                centerY - 85.dp.toPx(),
-                centerX - 20.dp.toPx(),
-                centerY - 70.dp.toPx(),
-            )
-
-            lineTo(
-                x = centerX - 60.dp.toPx(),
-                y = centerY - 40.dp.toPx()
-            )
-
-            cubicTo(
-                centerX - 70.dp.toPx(),
-                centerY - 30.dp.toPx(),
-                centerX - 70.dp.toPx(),
-                centerY - 30.dp.toPx(),
-                centerX - 70.dp.toPx(),
-                centerY - 20.dp.toPx(),
-            )
+            for (i in 0..4) {
+                lineTo(
+                    x = centerX + siteList[i][0].first.dp.toPx(),
+                    y = centerY + siteList[i][0].second.dp.toPx()
+                )
+                if (i < 2) {
+                    cubicTo(
+                        centerX + siteList[i][1].first.dp.toPx(),
+                        centerY + siteList[i][1].second.dp.toPx(),
+                        centerX + siteList[i][2].first.dp.toPx(),
+                        centerY + siteList[i][2].second.dp.toPx(),
+                        centerX + siteList[i][3].first.dp.toPx(),
+                        centerY + siteList[i][3].second.dp.toPx(),
+                    )
+                } else {
+                    cubicTo(
+                        centerX + siteList[i][1].first.dp.toPx(),
+                        centerY + siteList[i][1].second.dp.toPx(),
+                        centerX + siteList[i][1].first.dp.toPx(),
+                        centerY + siteList[i][1].second.dp.toPx(),
+                        centerX + siteList[i][2].first.dp.toPx(),
+                        centerY + siteList[i][2].second.dp.toPx(),
+                    )
+                }
+            }
             close()
         }
         drawPath(path = path, color = color)

@@ -4,10 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2515" />
+        <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/drawable/bottom_sel.xml" value="0.1" />
+        <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/drawable/bottom_shape.xml" value="0.131" />
+        <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/drawable/bottom_shape2.xml" value="0.2545" />
+        <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/drawable/bottom_shape3.xml" value="0.2545" />
+        <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/drawable/ic_access_alarm.xml" value="0.2545" />
         <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/drawable/ic_add.xml" value="0.2515" />
+        <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/drawable/ic_full1.xml" value="0.2545" />
         <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2515" />
         <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/drawable/ic_person.xml" value="0.2515" />
+        <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/drawable/test_sel1.xml" value="0.2545" />
+        <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/drawable/test_sel2.xml" value="0.2545" />
+        <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/drawable/test_sel3.xml" value="0.2545" />
         <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/layout/activity_main.xml" value="0.30757282692521576" />
+        <entry key="..\:/Users/wodrk/Desktop/Android_ WorkSpace/Adopt-Compose-In-Xml/app/src/main/res/menu/bottom_menu.xml" value="0.328125" />
       </map>
     </option>
   </component>

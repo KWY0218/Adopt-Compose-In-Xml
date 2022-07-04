@@ -10,4 +10,8 @@
 
     <color name="hous_gray">#F5F5F5</color>
     <color name="back_gray">#E1E1E1</color>
+    <color name="test1">#5E9EFF</color>
+    <color name="test2">#FFD66D</color>
+    <color name="test3">#FF6666</color>
+    <color name="test4">#FFF6E0</color>
 </resources>
